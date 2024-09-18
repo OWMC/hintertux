@@ -1,4 +1,4 @@
-[![Hintertux mountains](./static/images/hintertux-light.webp)]
+![Hintertux mountains](./static/images/hintertux-light.webp)
 
 # HINTERTUX
 
