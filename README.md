@@ -1,3 +1,5 @@
+[![Hintertux mountains](./static/images/hintertux-light.webp)]
+
 # HINTERTUX
 
 Component library and design system documentation. Built to serve OWMC's frontend needs.
