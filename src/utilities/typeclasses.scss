@@ -1,0 +1,24 @@
+@import '../tokens/typevars.scss';
+
+
+// FONTS =====================
+
+// Font sizes and weights
+
+// titles
+.site-app-title { font-size: $l3; font-weight: 800; line-height: $l3; }
+.large-section-page-title { font-size: $l2; font-weight: 700; line-height: $l2; }
+.medium-section-page-title { font-size: $l1; font-weight: 700; line-height: $l1; }
+.small-section-page-title { font-size: $m1; font-weight: 700; line-height: $m1; }
+
+// body/paragraphs
+.initial-paragraph { font-size: $s3; font-weight: 700; line-height: $s3; }
+.normal-paragraph { font-size: $s3; font-weight: 400; line-height: $s3; }
+.small-paragraph { font-size: $s2; font-weight: 400; line-height: $s2; }
+.tiny-paragraph { font-size: $s1; font-weight: 400; line-height: $s1; }
+
+// quote
+.quote-text { font-size: $l1; font-weight: 100; line-height: $l1; }
+
+// button
+.button-text { font-size: $s1; font-weight: 700; line-height: $s1; }

@@ -1,0 +1,34 @@
+@import '../tokens/colourvars.scss';
+
+
+// PALETTE =====================
+
+// Colours and background colour classes
+
+// amber
+.c-amber { color: $c-amber; }
+.bgc-amber { background-color: $c-amber; }
+
+// dark
+.c-darkness { color: $c-darkness; }
+.c-darker { color: $c-darker; }
+.c-darkest { color: $c-darkest; }
+.bgc-darkness { background-color: $c-darkness; }
+.bgc-darker { background-color: $c-darker; }
+.bgc-darkest { background-color: $c-darkest; }
+
+// light
+.c-lightGrey { color: $c-lightGrey; }
+.c-lighterGrey { color: $c-lighterGrey; }
+.c-lightestGrey { color: $c-lightestGrey; }
+.c-faint { color: $c-faint; }
+.c-fainter { color: $c-fainter; }
+.c-faintest { color: $c-faintest; }
+.c-white { color: $c-white; }
+.bgc-lightGrey { background-color: $c-lightGrey; }
+.bgc-lighterGrey { background-color: $c-lighterGrey; }
+.bgc-lightestGrey { background-color: $c-lightestGrey; }
+.bgc-faint { background-color: $c-faint; }
+.bgc-fainter { background-color: $c-fainter; }
+.bgc-faintest { background-color: $c-faintest; }
+.bgc-white { background-color: $c-white; }

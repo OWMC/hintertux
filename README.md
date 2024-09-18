@@ -27,3 +27,11 @@ Your app is ready to be deployed!
 ### `build-distro`
 
 Builds the comoponent library to the `distro` folder. The build transpiles the components' JSX and copies CSS and other assets. These can then be imported by other React apps.
+
+## Planned works
+
+Colours and typography MDX files have not been added yet. Sass issue. MDX documentation files that don't use components should be organised somewhere correctly.
+
+Review sass, prettier, and storybook-esling to make sure they serve a purpose well.
+
+Later we'll be working with Tailwind and shadcn/ui.
