@@ -1,0 +1,91 @@
+import { Meta, Typeset } from '@storybook/blocks';
+ 
+<Meta title="Typography" />
+ 
+export const typography = {
+  type: {
+    primary: '"Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
+  },
+  weight: {
+    light: '100',
+    regular: '400',
+    bold: '700',
+    extrabold: '800',
+    black: '900',
+  },
+  size: {
+    s1: 13,
+    s2: 14,
+    s3: 16,
+    m1: 21,
+    l1: 32,
+    l2: 48,
+    l3: 56,
+  },
+};
+ 
+export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+ 
+# Typography
+
+<hr />
+
+## Site/App title
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.l3),
+  ]}
+  fontWeight={typography.weight.extrabold}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+## Page/Section titles
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.m1),
+    Number(typography.size.l1),
+    Number(typography.size.l2),
+  ]}
+  fontWeight={typography.weight.bold}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+## Body/Paragraph text
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.s1),
+    Number(typography.size.s2),
+    Number(typography.size.s3),
+  ]}
+  fontWeight={typography.weight.regular}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+## Quote text
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.l1),
+  ]}
+  fontWeight={typography.weight.light}
+  fontStyle="italic"
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+## Button text
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.s1),
+  ]}
+  fontWeight={typography.weight.bold}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
