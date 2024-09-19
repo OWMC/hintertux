@@ -1,0 +1,84 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import { Table } from './table.jsx';
+import '../utilities/colourclasses.scss';
+import './divs.scss';
+
+
+<Meta title="Colours" />
+
+# Colour palette
+
+<hr />
+
+<ColorPalette>
+  <ColorItem
+    title="Amber"
+    subtitle="Amber colour"
+    colors={{ Amber: '#DF9E36' }}
+  />
+  <ColorItem
+    title="Dark"
+    subtitle="Dark colours"
+    colors={{ Darkness: '#666', Darker: '#404040', Darkest: '#141414' }}
+  />
+  <ColorItem
+    title="Light"
+    subtitle="Light colours"
+    colors={{LightGrey: '#AAAAAA', LighterGrey: '#BBBBBB', LightestGrey: '#CCCCCC', Faint: '#E6E6E6', Fainter: '#EEEEEE', Faintest: '#F1F1F1', White: '#FFFFFF'}}
+  />
+</ColorPalette>
+
+
+
+
+<div class="parent">
+  <div class="child">
+    # Classnames
+
+    Colours are exposed as Classnames for colour and background colour:
+
+    <Table
+      headers={['Amber', 'Dark', 'Light']}
+      rows={[
+        ['c-amber', 'c-darkness', 'c-white'],
+        ['-', 'c-darker', 'c-faintest'],
+        ['-', 'c-darkest', 'c-fainter'],
+        ['-', '-', 'c-faint'],
+        ['-', '-', 'c-lightestGrey'],
+        ['-', '-', 'c-lighterGrey'],
+        ['-', '-', 'c-lightGrey'],
+        ['bgc-amber', 'bgc-darkness', 'bgc-white'],
+        ['-', 'bgc-darker', 'bgc-faintest'],
+        ['-', 'bgc-darkest', 'bgc-fainter'],
+        ['-', '-', 'bgc-lightestGrey'],
+        ['-', '-', 'bgc-lighterGrey'],
+        ['-', '-', 'bgc-lightGrey'],
+      ]}
+    />
+
+  </div>
+  <div class="child">
+  # SCSS variables
+
+  Possibly only needed for the above classnames.
+
+  <Table
+    headers={['Key', 'Value']}
+    rows={[
+      ['$c-amber', '#DF9E36'],
+      ['$c-darkest', '#141414'],
+      ['$c-darker', '#404040'],
+      ['$c-darkness', '#666'],
+      ['$c-lightGrey', '#AAAAAA'],
+      ['$c-lighterGrey', '#BBBBBB'],
+      ['$c-lightestGrey', '#CCCCCC'],
+      ['$c-faint', '#E6E6E6'],
+      ['$c-fainter', '#EEEEEE'],
+      ['$c-faintest', '#F1F1F1'],
+      ['$c-white', '#FFFFFF'],
+    ]}
+  />
+
+  </div>
+</div>
+

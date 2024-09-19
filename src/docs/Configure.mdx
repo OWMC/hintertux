@@ -1,5 +1,5 @@
 import { Meta } from "@storybook/blocks";
-
+import hintertuxImage from "./../static/images/hintertux-light.webp";
 import Github from "./../assets/github.svg";
 import Discord from "./../assets/discord.svg";
 import Youtube from "./../assets/youtube.svg";
@@ -35,11 +35,18 @@ export const RightArrow = () => <svg
 
 <div className="sb-container">
   <div className='sb-section-title'>
-    # Design tokens video
+    # Hintertux
 
-    https://www.youtube.com/watch?v=-Dq_-5SpYEM
+    <hr />
 
-    # Configure your project
+    <img
+      src={hintertuxImage}
+      alt="hintertux"
+    />
+
+    A component library with documentation via Storybook.
+
+    <h2>Storybook configurations</h2>
 
     Because Storybook works separately from your app, you'll need to configure it for your specific stack and setup. Below, explore guides for configuring Storybook with popular frameworks and tools. If you get stuck, learn how you can ask for help from our community.
   </div>
@@ -85,7 +92,7 @@ export const RightArrow = () => <svg
 </div>
 <div className="sb-container">
   <div className='sb-section-title'>
-    # Do more with Storybook
+    <h2>Do more with Storybook</h2>
 
     Now that you know the basics, let's explore other parts of Storybook that will improve your experience. This list is just to get you started. You can customise Storybook in many ways to fit your needs.
   </div>
