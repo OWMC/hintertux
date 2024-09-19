@@ -1,7 +1,7 @@
 import { fn } from '@storybook/test';
 import Button from './Button';
 
-/** The button component has props for light/dark, min-width, and size. To test the light/dark variations on differnt backgrounds, use the preview background from the Storybook preview menu. */
+/** The button component has props for min-width, and size.  */
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
@@ -18,7 +18,6 @@ export default {
     onClick: fn(),
     minWidth: false,
     size: "medium",
-    dark: false,
     href: 'hi',
   },
 };
