@@ -1,29 +1,23 @@
-import { fn } from '@storybook/test';
-
-import { Header } from './Header';
+import Navigation from './Navigation';
 
 export default {
-  title: 'Example/Header',
-  component: Header,
+  title: 'Components/Navigation',
+  component: Navigation,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
-  },
-  args: {
-    onLogin: fn(),
-    onLogout: fn(),
-    onCreateAccount: fn(),
-  },
-};
-
-export const LoggedIn = {
-  args: {
-    user: {
-      name: 'Jane Doe',
+    docs: {
+      story: {
+        inline: false,
+        iframeHeight: 400,
+      },
     },
   },
+  args: {
+    navLinks: [ ...Navigation.defaultProps.navLinks ],
+  },
 };
 
-export const LoggedOut = {};
+export const SimpleStory = {};
