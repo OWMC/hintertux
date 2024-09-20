@@ -1,0 +1,53 @@
+.storybook-header {
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.storybook-header a {
+  transition: 0.25s;
+}
+
+.storybook-header a:hover {
+  background: #EEEEEE;
+}
+
+.storybook-header .logo {
+  display: block;
+  height: 32px;
+  padding: 20px;
+}
+
+.storybook-header button {
+  margin-right: 10px;
+}
+
+.storybook-header button:last-of-type {
+  margin-right: 20px;
+}
+
+.storybook-header .welcome {
+  color: #333;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 24px;
+  margin-right: 10px;
+}
+
+.loginNav {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 720px) {
+  .logo, .logoLink {
+    display: inline-block;
+  }
+  .loginAndNav {
+    align-items: center;
+    display: flex;
+    height: 72px;
+    overflow: hidden;
+  }
+}
