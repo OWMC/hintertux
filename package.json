@@ -2,10 +2,14 @@
   "name": "hintertux",
   "version": "1.0.0",
   "description": "Component library and design system documentation.",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare-distro": "rm -rf distro && babel src/components --out-dir distro --ignore 'components/**/*.stories.js' && sass --no-source-map src/components:distro",
+    "fix-css-and-fonts": "node scripts/update-references-to-css.js && node scripts/update-font-paths.js",
+    "build-distro": "npm run prepare-distro && cp ./package.json distro/ && cp -r ./src/static/fonts distro/ && npm run fix-css-and-fonts"
   },
   "repository": {
     "type": "git",
@@ -24,6 +28,9 @@
   },
   "homepage": "https://github.com/OWMC/hintertux#readme",
   "devDependencies": {
+    "@babel/cli": "^7.25.6",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
     "@chromatic-com/storybook": "^1.9.0",
     "@storybook/addon-essentials": "^8.3.1",
     "@storybook/addon-interactions": "^8.3.1",
@@ -35,16 +42,14 @@
     "@storybook/react": "^8.3.1",
     "@storybook/react-webpack5": "^8.3.1",
     "@storybook/test": "^8.3.1",
-    "css-loader": "^7.1.2",
     "eslint-plugin-storybook": "^0.8.0",
     "prettier": "^3.3.3",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sass": "^1.77.8",
-    "sass-loader": "^16.0.1",
     "storybook": "^8.3.1",
-    "style-loader": "^4.0.0"
+    "webpack-cli": "^5.1.4"
   },
   "peerDependencies": {
     "react": "^18.3.1",
