@@ -19,10 +19,13 @@ function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t =
  */
 var Button = function Button(_ref) {
   var backgroundColor = _ref.backgroundColor,
-    size = _ref.size,
-    minWidth = _ref.minWidth,
+    _ref$size = _ref.size,
+    size = _ref$size === void 0 ? "medium" : _ref$size,
+    _ref$minWidth = _ref.minWidth,
+    minWidth = _ref$minWidth === void 0 ? false : _ref$minWidth,
     label = _ref.label,
-    href = _ref.href,
+    _ref$href = _ref.href,
+    href = _ref$href === void 0 ? "" : _ref$href,
     newTab = _ref.newTab,
     props = _objectWithoutProperties(_ref, _excluded);
   var minimumwidth = minWidth ? 'storybook-button--minwidth' : 'no';
@@ -41,13 +44,6 @@ Button.propTypes = {
   newTab: _propTypes["default"].bool,
   minWidth: _propTypes["default"].bool,
   size: _propTypes["default"].oneOf(['small', 'medium', 'large']),
-  label: _propTypes["default"].string.isRequired,
-  onClick: _propTypes["default"].func
-};
-Button.defaultProps = {
-  href: '',
-  size: 'medium',
-  minWidth: false,
-  onClick: undefined
+  label: _propTypes["default"].string.isRequired
 };
 var _default = exports["default"] = Button;

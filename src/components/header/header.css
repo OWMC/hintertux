@@ -1,8 +1,10 @@
 .storybook-header {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  display: flex;
   align-items: center;
+  display: flex;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   justify-content: space-between;
+  position: relative;
+  z-index: 10;
 }
 
 .storybook-header a {
@@ -14,6 +16,7 @@
 }
 
 .storybook-header .logo {
+  box-sizing: unset;
   display: block;
   height: 32px;
   padding: 20px;

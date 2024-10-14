@@ -14,10 +14,15 @@ var toggleClass = function toggleClass() {
   element.classList.toggle("visible");
 };
 var Navigation = function Navigation(_ref) {
-  var navLinks = _ref.navLinks;
-  console.log("NAVLINKS: ", navLinks.map(function (navLink) {
-    return navLink;
-  }));
+  var _ref$navLinks = _ref.navLinks,
+    navLinks = _ref$navLinks === void 0 ? [{
+      title: 'Home',
+      url: '/'
+    }, {
+      title: 'About',
+      url: '/about'
+    }] : _ref$navLinks;
+  // console.log("NAVLINKS: ", navLinks.map((navLink) => navLink));
   return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_Button["default"], {
     id: "mobile-menu-toggle",
     "aria-controls": "primary-menu",
@@ -47,14 +52,5 @@ Navigation.propTypes = {
     title: _propTypes["default"].string.isRequired,
     url: _propTypes["default"].string.isRequired
   }))
-};
-Navigation.defaultProps = {
-  navLinks: [{
-    url: "*",
-    title: "ringo"
-  }, {
-    url: "*",
-    title: "les"
-  }]
 };
 var _default = exports["default"] = Navigation;

@@ -8,8 +8,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare-distro": "rm -rf distro && babel src/components --out-dir distro --ignore 'components/**/*.stories.js' && sass --no-source-map src/components:distro",
-    "fix-css-and-fonts": "node scripts/update-references-to-css.js && node scripts/update-font-paths.js",
-    "build-distro": "npm run prepare-distro && cp ./package.json distro/ && cp -r ./src/static/fonts distro/ && npm run fix-css-and-fonts"
+    "fix-css": "node scripts/update-references-to-css.js",
+    "build-distro": "npm run prepare-distro && cp ./package.json distro/ && npm run fix-css"
   },
   "repository": {
     "type": "git",

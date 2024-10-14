@@ -5,7 +5,9 @@ import Navigation from '../navigation/Navigation';
 import './header.css';
 import svgIcon from '../../static/logos/owmc-logo.svg';
 
-const Header = ({ logoLink, login, user, onLogin, onLogout, onCreateAccount, showPrimaryNav }) => (
+console.log("svgIcon: ", svgIcon);
+
+const Header = ({ logoLink = null, login = false, user = null, onLogin, onLogout, onCreateAccount, showPrimaryNav = true }) => (
   <header>
     <div className="storybook-header">
       { logoLink ? (
@@ -54,13 +56,6 @@ Header.propTypes = {
   onLogin: PropTypes.func.isRequired,
   onLogout: PropTypes.func.isRequired,
   onCreateAccount: PropTypes.func.isRequired,
-};
-
-Header.defaultProps = {
-  logoLink: null,
-  showPrimaryNav: true,
-  login: false,
-  user: null,
 };
 
 export default Header;
