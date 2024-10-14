@@ -15,9 +15,6 @@ export default {
       },
     },
   },
-  args: {
-    navLinks: [ ...Navigation.defaultProps.navLinks ],
-  },
 };
 
 export const SimpleStory = {};

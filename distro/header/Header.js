@@ -11,14 +11,19 @@ var _Navigation = _interopRequireDefault(require("../navigation/Navigation"));
 require("./header.css");
 var _owmcLogo = _interopRequireDefault(require("../../static/logos/owmc-logo.svg"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
+console.log("svgIcon: ", _owmcLogo["default"]);
 var Header = function Header(_ref) {
-  var logoLink = _ref.logoLink,
-    login = _ref.login,
-    user = _ref.user,
+  var _ref$logoLink = _ref.logoLink,
+    logoLink = _ref$logoLink === void 0 ? null : _ref$logoLink,
+    _ref$login = _ref.login,
+    login = _ref$login === void 0 ? false : _ref$login,
+    _ref$user = _ref.user,
+    user = _ref$user === void 0 ? null : _ref$user,
     onLogin = _ref.onLogin,
     onLogout = _ref.onLogout,
     onCreateAccount = _ref.onCreateAccount,
-    showPrimaryNav = _ref.showPrimaryNav;
+    _ref$showPrimaryNav = _ref.showPrimaryNav,
+    showPrimaryNav = _ref$showPrimaryNav === void 0 ? true : _ref$showPrimaryNav;
   return /*#__PURE__*/_react["default"].createElement("header", null, /*#__PURE__*/_react["default"].createElement("div", {
     className: "storybook-header"
   }, logoLink ? /*#__PURE__*/_react["default"].createElement("a", {
@@ -66,11 +71,5 @@ Header.propTypes = {
   onLogin: _propTypes["default"].func.isRequired,
   onLogout: _propTypes["default"].func.isRequired,
   onCreateAccount: _propTypes["default"].func.isRequired
-};
-Header.defaultProps = {
-  logoLink: null,
-  showPrimaryNav: true,
-  login: false,
-  user: null
 };
 var _default = exports["default"] = Header;

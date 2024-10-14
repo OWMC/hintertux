@@ -6,7 +6,7 @@ import './button.scss';
 /**
  * Primary UI component for user interaction
  */
-const Button = ({ backgroundColor, size, minWidth, label, href, newTab, ...props }) => {
+const Button = ({ backgroundColor, size = "medium",  minWidth = false, label, href = "", newTab, ...props }) => {
   const minimumwidth = minWidth ? 'storybook-button--minwidth' : 'no';
   return (href ? 
   <a 
@@ -31,15 +31,7 @@ Button.propTypes = {
   newTab: PropTypes.bool,
   minWidth: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
-};
-
-Button.defaultProps = {
-  href: '',
-  size: 'medium',
-  minWidth: false,
-  onClick: undefined,
+  label: PropTypes.string.isRequired
 };
 
 export default Button;

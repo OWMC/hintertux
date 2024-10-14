@@ -8,8 +8,11 @@ const toggleClass = () => {
   element.classList.toggle("visible");
 };
 
-const Navigation = ({navLinks}) => { 
-  console.log("NAVLINKS: ", navLinks.map((navLink) => navLink));
+const Navigation = ({ navLinks = [
+  { title: 'Home', url: '/' },
+  { title: 'About', url: '/about' },
+] }) => { 
+  // console.log("NAVLINKS: ", navLinks.map((navLink) => navLink));
   return (
   <>
     <Button id="mobile-menu-toggle" aria-controls="primary-menu" aria-expanded="false" onClick={toggleClass} label="MENU" size="small" />
@@ -32,12 +35,5 @@ Navigation.propTypes = {
       url: PropTypes.string.isRequired,
     }),
 )};
-
-Navigation.defaultProps = {
-  navLinks: [
-    {url: "*", title: "ringo"},
-    {url: "*", title: "les"},
-  ],
-};
 
 export default Navigation;

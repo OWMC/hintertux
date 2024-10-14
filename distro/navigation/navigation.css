@@ -71,7 +71,7 @@
   color: #404040;
   display: block;
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 600;
   line-height: 24px;
   padding: 23px 20px;
   text-align: center;
@@ -79,6 +79,11 @@
   transition: 0.2s;
 }
 
+@media screen and (min-width: 720px) {
+  .primary-nav-list-item-link {
+    font-weight: 200;
+  }
+}
 .primary-nav-list-item-link:hover, .primary-nav-list-item-link:focus, .primary-nav-list-item-link a:active {
   background: #f2f2f2;
   border-top: 2px solid #f2f2f2;
