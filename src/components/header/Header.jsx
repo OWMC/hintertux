@@ -5,17 +5,15 @@ import Navigation from '../navigation/Navigation';
 import './header.css';
 import svgIcon from '../../static/logos/owmc-logo.svg';
 
-console.log("svgIcon: ", svgIcon);
-
 const Header = ({ logoLink = null, login = false, user = null, onLogin, onLogout, onCreateAccount, showPrimaryNav = true }) => (
   <header>
     <div className="storybook-header">
       { logoLink ? (
         <a href={logoLink.url} title={logoLink.title} className="logoLink">
-          <img src={svgIcon} alt="OWMC logo" className="logo" />
+          <img src={ window.next ? svgIcon.src : svgIcon} alt="OWMC logo" className="logo" />
         </a>
       ) : (
-        <img src={svgIcon} alt="OWMC logo" className="logo" />
+        <img src={ window.next ? svgIcon.src : svgIcon} alt="OWMC logo" className="logo" />
       ) }
       <div className="loginAndNav">
         {(showPrimaryNav !== false) && 

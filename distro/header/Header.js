@@ -11,7 +11,6 @@ var _Navigation = _interopRequireDefault(require("../navigation/Navigation"));
 require("./header.css");
 var _owmcLogo = _interopRequireDefault(require("../../static/logos/owmc-logo.svg"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
-console.log("svgIcon: ", _owmcLogo["default"]);
 var Header = function Header(_ref) {
   var _ref$logoLink = _ref.logoLink,
     logoLink = _ref$logoLink === void 0 ? null : _ref$logoLink,
@@ -31,11 +30,11 @@ var Header = function Header(_ref) {
     title: logoLink.title,
     className: "logoLink"
   }, /*#__PURE__*/_react["default"].createElement("img", {
-    src: _owmcLogo["default"],
+    src: window.next ? _owmcLogo["default"].src : _owmcLogo["default"],
     alt: "OWMC logo",
     className: "logo"
   })) : /*#__PURE__*/_react["default"].createElement("img", {
-    src: _owmcLogo["default"],
+    src: window.next ? _owmcLogo["default"].src : _owmcLogo["default"],
     alt: "OWMC logo",
     className: "logo"
   }), /*#__PURE__*/_react["default"].createElement("div", {
