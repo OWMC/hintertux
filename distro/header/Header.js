@@ -11,33 +11,42 @@ var _Navigation = _interopRequireDefault(require("../navigation/Navigation"));
 require("./header.css");
 var _owmcLogo = _interopRequireDefault(require("../../static/logos/owmc-logo.svg"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
-console.log("svgIcon: ", _owmcLogo["default"]);
-var Header = function Header(_ref) {
-  var _ref$logoLink = _ref.logoLink,
-    logoLink = _ref$logoLink === void 0 ? null : _ref$logoLink,
-    _ref$login = _ref.login,
-    login = _ref$login === void 0 ? false : _ref$login,
-    _ref$user = _ref.user,
-    user = _ref$user === void 0 ? null : _ref$user,
-    onLogin = _ref.onLogin,
-    onLogout = _ref.onLogout,
-    onCreateAccount = _ref.onCreateAccount,
-    _ref$showPrimaryNav = _ref.showPrimaryNav,
-    showPrimaryNav = _ref$showPrimaryNav === void 0 ? true : _ref$showPrimaryNav;
+var Image = function Image(_ref) {
+  var imgUrl = _ref.imgUrl,
+    altText = _ref.altText,
+    classText = _ref.classText;
+  return /*#__PURE__*/_react["default"].createElement("img", {
+    src: window.next ? imgUrl.src : imgUrl,
+    alt: altText,
+    className: classText
+  });
+};
+var Header = function Header(_ref2) {
+  var _ref2$logoLink = _ref2.logoLink,
+    logoLink = _ref2$logoLink === void 0 ? null : _ref2$logoLink,
+    _ref2$login = _ref2.login,
+    login = _ref2$login === void 0 ? false : _ref2$login,
+    _ref2$user = _ref2.user,
+    user = _ref2$user === void 0 ? null : _ref2$user,
+    onLogin = _ref2.onLogin,
+    onLogout = _ref2.onLogout,
+    onCreateAccount = _ref2.onCreateAccount,
+    _ref2$showPrimaryNav = _ref2.showPrimaryNav,
+    showPrimaryNav = _ref2$showPrimaryNav === void 0 ? true : _ref2$showPrimaryNav;
   return /*#__PURE__*/_react["default"].createElement("header", null, /*#__PURE__*/_react["default"].createElement("div", {
     className: "storybook-header"
   }, logoLink ? /*#__PURE__*/_react["default"].createElement("a", {
     href: logoLink.url,
     title: logoLink.title,
     className: "logoLink"
-  }, /*#__PURE__*/_react["default"].createElement("img", {
-    src: _owmcLogo["default"],
-    alt: "OWMC logo",
-    className: "logo"
-  })) : /*#__PURE__*/_react["default"].createElement("img", {
-    src: _owmcLogo["default"],
-    alt: "OWMC logo",
-    className: "logo"
+  }, /*#__PURE__*/_react["default"].createElement(Image, {
+    imgUrl: _owmcLogo["default"],
+    altText: "OWMC logo",
+    classText: "logo"
+  })) : /*#__PURE__*/_react["default"].createElement(Image, {
+    imgUrl: _owmcLogo["default"],
+    altText: "OWMC logo",
+    classText: "logo"
   }), /*#__PURE__*/_react["default"].createElement("div", {
     className: "loginAndNav"
   }, showPrimaryNav !== false && /*#__PURE__*/_react["default"].createElement(_Navigation["default"], null), login !== false && /*#__PURE__*/_react["default"].createElement("nav", {
