@@ -7,6 +7,11 @@
   z-index: 10;
 }
 
+@media (prefers-color-scheme: dark) {
+  .storybook-header {
+    background: #141414;
+  }
+}
 .storybook-header a {
   transition: 0.25s;
 }
@@ -15,6 +20,11 @@
   background: #EEEEEE;
 }
 
+@media (prefers-color-scheme: dark) {
+  .storybook-header a:hover {
+    background: #404040;
+  }
+}
 .storybook-header .logo {
   box-sizing: unset;
   display: block;
@@ -22,6 +32,11 @@
   padding: 20px;
 }
 
+@media (prefers-color-scheme: dark) {
+  .storybook-header .logo {
+    filter: invert();
+  }
+}
 .storybook-header button {
   margin-right: 10px;
 }
@@ -31,13 +46,18 @@
 }
 
 .storybook-header .welcome {
-  color: #333;
+  color: #141414;
   display: inline-block;
   font-size: 14px;
   line-height: 24px;
   margin-right: 10px;
 }
 
+@media (prefers-color-scheme: dark) {
+  .storybook-header .welcome {
+    color: #EEEEEE;
+  }
+}
 .loginNav {
   display: inline-block;
   margin-left: 20px;

@@ -2,10 +2,12 @@ import { fn } from '@storybook/test';
 import { bool } from 'prop-types';
 import Header from './Header';
 
+
+
 export default {
   title: 'Components/Header',
   component: Header,
-  tags: ['autodocs'],
+  // tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
   },
@@ -29,14 +31,6 @@ export const LogoLink = {
       title: 'Title'
     }
   },
-  parameters: {
-    docs: {
-      story: {
-        inline: false,
-        iframeHeight: 400,
-      },
-    },
-  }
 };
 
 export const LoggedIn = {

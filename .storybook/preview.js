@@ -6,12 +6,16 @@ const preview = {
         order: ['Configure your project', 'Colours', 'Typography', 'Components', ['Button','Navigation', 'Header',  'Pages'], '*', 'WIP'],
       },
     },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
+        backgrounds: {
+      values: [
+        // 👇 Default values
+        { name: 'Dark', value: '#141414' },
+        { name: 'Light', value: '#fff' },
+      ],
+      // 👇 Specify which background is shown by default
+      default: 'Light',
     },
+
   },
 };
 
