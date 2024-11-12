@@ -10,16 +10,6 @@ var _Button = _interopRequireDefault(require("../button/Button"));
 var _Navigation = _interopRequireDefault(require("../navigation/Navigation"));
 require("./header.css");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
-var Image = function Image(_ref) {
-  var imgUrl = _ref.imgUrl,
-    altText = _ref.altText,
-    classText = _ref.classText;
-  return /*#__PURE__*/_react["default"].createElement("img", {
-    src: imgUrl,
-    alt: altText,
-    className: classText
-  });
-};
 var Logo = function Logo() {
   return /*#__PURE__*/_react["default"].createElement("svg", {
     version: "1.1",
@@ -44,18 +34,18 @@ var Logo = function Logo() {
     points: "120.167,2.866 121.886,8.937 120.191,2.866 \t"
   }));
 };
-var Header = function Header(_ref2) {
-  var _ref2$logoLink = _ref2.logoLink,
-    logoLink = _ref2$logoLink === void 0 ? null : _ref2$logoLink,
-    _ref2$login = _ref2.login,
-    login = _ref2$login === void 0 ? false : _ref2$login,
-    _ref2$user = _ref2.user,
-    user = _ref2$user === void 0 ? null : _ref2$user,
-    onLogin = _ref2.onLogin,
-    onLogout = _ref2.onLogout,
-    onCreateAccount = _ref2.onCreateAccount,
-    _ref2$showPrimaryNav = _ref2.showPrimaryNav,
-    showPrimaryNav = _ref2$showPrimaryNav === void 0 ? true : _ref2$showPrimaryNav;
+var Header = function Header(_ref) {
+  var _ref$logoLink = _ref.logoLink,
+    logoLink = _ref$logoLink === void 0 ? null : _ref$logoLink,
+    _ref$login = _ref.login,
+    login = _ref$login === void 0 ? false : _ref$login,
+    _ref$user = _ref.user,
+    user = _ref$user === void 0 ? null : _ref$user,
+    onLogin = _ref.onLogin,
+    onLogout = _ref.onLogout,
+    onCreateAccount = _ref.onCreateAccount,
+    _ref$showPrimaryNav = _ref.showPrimaryNav,
+    showPrimaryNav = _ref$showPrimaryNav === void 0 ? true : _ref$showPrimaryNav;
   return /*#__PURE__*/_react["default"].createElement("header", null, /*#__PURE__*/_react["default"].createElement("div", {
     className: "storybook-header"
   }, logoLink ? /*#__PURE__*/_react["default"].createElement("a", {

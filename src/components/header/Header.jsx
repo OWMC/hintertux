@@ -4,10 +4,6 @@ import Button from '../button/Button';
 import Navigation from '../navigation/Navigation';
 import './header.css';
 
-const Image = ({imgUrl, altText, classText}) => (
-  <img src={imgUrl} alt={altText} className={classText} />
-);
-
 const Logo = () => (
   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" className="logo" viewBox="0 0 595.28 136.837" enableBackground="new 0 0 595.28 136.837">
     <path d="M102.288,9.599C92.004,3.87,80.697,1,68.359,1C56.021,1,44.712,3.87,34.43,9.599c-10.28,5.734-18.413,13.71-24.394,23.929
@@ -33,7 +29,6 @@ const Logo = () => (
     <polygon points="120.167,2.866 121.886,8.937 120.191,2.866 	"/>
   </svg>
 );
-
 
 const Header = ({ logoLink = null, login = false, user = null, onLogin, onLogout, onCreateAccount, showPrimaryNav = true }) => (
   <header>
