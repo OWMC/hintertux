@@ -1,0 +1,9 @@
+#mobile-menu-toggle {
+    font-weight: bold;
+  }
+  @media screen and (min-width: 720px) {
+    #mobile-menu-toggle {
+      display: none;
+    }
+  }
+  

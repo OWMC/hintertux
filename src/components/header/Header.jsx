@@ -30,7 +30,16 @@ const Logo = () => (
   </svg>
 );
 
-const Header = ({ logoLink = null, login = false, user = null, onLogin, onLogout, onCreateAccount, showPrimaryNav = true }) => (
+const Header = ({ 
+  logoLink = null,
+  login = false,
+  user = null,
+  onLogin,
+  onLogout,
+  onCreateAccount,
+  showPrimaryNav = true,
+  navLinks,
+ }) => (
   <header>
     <div className="storybook-header">
       { logoLink ? (
@@ -42,7 +51,7 @@ const Header = ({ logoLink = null, login = false, user = null, onLogin, onLogout
       ) }
       <div className="loginAndNav">
         {(showPrimaryNav !== false) && 
-          <Navigation />
+          <Navigation navLinks={navLinks} />
         }
         {(login !== false) &&
           <nav className="loginNav">

@@ -18,7 +18,7 @@ export default {
   args: {
     onLogin: fn(),
     onLogout: fn(),
-    onCreateAccount: fn(),
+    onCreateAccount: fn()
   },
 };
 

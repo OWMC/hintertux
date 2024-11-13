@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '../button/Button';
+import MobileNavButton from '../mobileNavButton/MobileNavButton';
 import './navigation.css';
 
 const toggleClass = () => {
@@ -12,10 +12,10 @@ const Navigation = ({ navLinks = [
   { title: 'Home', url: '/' },
   { title: 'About', url: '/about' },
 ] }) => { 
-  // console.log("NAVLINKS: ", navLinks.map((navLink) => navLink));
+  // console.log("NAVLINKS: ", navLinks.map((navLink, id) => navLink));
   return (
   <>
-    <Button id="mobile-menu-toggle" aria-controls="primary-menu" aria-expanded="false" onClick={toggleClass} label="MENU" size="small" />
+    <MobileNavButton />
     <nav id="primary-navigation" className="primary-navigation" role="navigation">
       <ul id="primary-nav-list" className="primary-nav-list">
         { navLinks.map((navLink, idx) => 
@@ -29,7 +29,7 @@ const Navigation = ({ navLinks = [
 )};
 
 Navigation.propTypes = {
-  navlinks: PropTypes.arrayOf(
+  navLinks: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,

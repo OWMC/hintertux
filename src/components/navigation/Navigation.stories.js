@@ -21,4 +21,11 @@ export default {
   },
 };
 
-export const SimpleStory = {};
+export const SimpleStory = {
+  args: {
+    navLinks: [
+      { title: 'Home', url: '/' },
+      { title: 'About', url: '/about' },
+    ]
+  }
+};
