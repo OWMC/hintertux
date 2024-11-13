@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '../button/Button';
-import './mobileNavButton.module.css';
+import './mobileNavButton.css';
 
 const toggleClass = () => {
   var element = document.getElementById("primary-nav-list");
@@ -16,13 +16,5 @@ const MobileNavButton = () => {
     </>
   )
 };
-
-MobileNavButton.propTypes = {
-  navLinks: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
-    }),
-)};
 
 export default MobileNavButton;

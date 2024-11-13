@@ -45,7 +45,8 @@ var Header = function Header(_ref) {
     onLogout = _ref.onLogout,
     onCreateAccount = _ref.onCreateAccount,
     _ref$showPrimaryNav = _ref.showPrimaryNav,
-    showPrimaryNav = _ref$showPrimaryNav === void 0 ? true : _ref$showPrimaryNav;
+    showPrimaryNav = _ref$showPrimaryNav === void 0 ? true : _ref$showPrimaryNav,
+    navLinks = _ref.navLinks;
   return /*#__PURE__*/_react["default"].createElement("header", null, /*#__PURE__*/_react["default"].createElement("div", {
     className: "storybook-header"
   }, logoLink ? /*#__PURE__*/_react["default"].createElement("a", {
@@ -54,7 +55,9 @@ var Header = function Header(_ref) {
     className: "logoLink"
   }, /*#__PURE__*/_react["default"].createElement(Logo, null)) : /*#__PURE__*/_react["default"].createElement(Logo, null), /*#__PURE__*/_react["default"].createElement("div", {
     className: "loginAndNav"
-  }, showPrimaryNav !== false && /*#__PURE__*/_react["default"].createElement(_Navigation["default"], null), login !== false && /*#__PURE__*/_react["default"].createElement("nav", {
+  }, showPrimaryNav !== false && /*#__PURE__*/_react["default"].createElement(_Navigation["default"], {
+    navLinks: navLinks
+  }), login !== false && /*#__PURE__*/_react["default"].createElement("nav", {
     className: "loginNav"
   }, user ? /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement("div", {
     className: "welcome"

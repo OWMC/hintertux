@@ -1,0 +1,21 @@
+#mobile-menu-toggle {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 720px) {
+  #mobile-menu-toggle {
+    display: none;
+  }
+}
+.visible {
+  /* Mobile visible */
+  background: #ffffff;
+  left: 0;
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .visible {
+    background: #141414;
+  }
+}
