@@ -87,6 +87,7 @@ Header.propTypes = {
   }),
   onLogin: _propTypes["default"].func.isRequired,
   onLogout: _propTypes["default"].func.isRequired,
-  onCreateAccount: _propTypes["default"].func.isRequired
+  onCreateAccount: _propTypes["default"].func.isRequired,
+  navLinks: _propTypes["default"].array
 };
 var _default = exports["default"] = Header;

@@ -88,6 +88,7 @@ Header.propTypes = {
   onLogin: PropTypes.func.isRequired,
   onLogout: PropTypes.func.isRequired,
   onCreateAccount: PropTypes.func.isRequired,
+  navLinks: PropTypes.array
 };
 
 export default Header;
