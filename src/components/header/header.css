@@ -30,6 +30,7 @@
   box-sizing: unset;
   display: block;
   height: 32px;
+  min-width: 132px;
   padding: 20px;  
 }
 
@@ -68,14 +69,16 @@
   margin-left: 20px;
 }
 
+.loginAndNav {
+  align-items: center;
+  display: flex;
+  height: 72px;
+  overflow: hidden;
+  flex: none;
+}
+
 @media screen and (min-width: 720px) {
   .logo, .logoLink {
     display: inline-block;
-  }
-  .loginAndNav {
-    align-items: center;
-    display: flex;
-    height: 72px;
-    overflow: hidden;
   }
 }
