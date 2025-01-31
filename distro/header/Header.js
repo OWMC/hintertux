@@ -47,8 +47,10 @@ var Header = function Header(_ref) {
     _ref$showPrimaryNav = _ref.showPrimaryNav,
     showPrimaryNav = _ref$showPrimaryNav === void 0 ? true : _ref$showPrimaryNav,
     navLinks = _ref.navLinks;
-  return /*#__PURE__*/_react["default"].createElement("header", null, /*#__PURE__*/_react["default"].createElement("div", {
-    className: "storybook-header"
+  return /*#__PURE__*/_react["default"].createElement("header", {
+    className: "hintertux-header"
+  }, /*#__PURE__*/_react["default"].createElement("div", {
+    className: "header-layout-container"
   }, logoLink ? /*#__PURE__*/_react["default"].createElement("a", {
     href: logoLink.url,
     title: logoLink.title,

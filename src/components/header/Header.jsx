@@ -40,8 +40,8 @@ const Header = ({
   showPrimaryNav = true,
   navLinks,
  }) => (
-  <header>
-    <div className="storybook-header">
+  <header className="hintertux-header">
+    <div className="header-layout-container">
       { logoLink ? (
         <a href={logoLink.url} title={logoLink.title} className="logoLink">
           <Logo />
