@@ -3,13 +3,19 @@
   display: flex;
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   justify-content: space-between;
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 10;
 }
 
 @media (prefers-color-scheme: dark) {
   .hintertux-header {
     background: #141414;
+  }
+}
+@media screen and (min-width: 720px) {
+  .hintertux-header {
+    position: relative;
   }
 }
 .hintertux-header a {
