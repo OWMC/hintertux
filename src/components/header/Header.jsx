@@ -41,20 +41,19 @@ const Header = ({
   navLinks,
  }) => (
   <header className="hintertux-header">
-    <div className="header-layout-container">
-      { logoLink ? (
+    { logoLink ? (
         <a href={logoLink.url} title={logoLink.title} className="logoLink">
           <Logo />
         </a>
-      ) : (
-        <Logo />
-      ) }
-      <div className="loginAndNav">
-        {(showPrimaryNav !== false) && 
-          <Navigation navLinks={navLinks} />
-        }
-        {(login !== false) &&
-          <nav className="loginNav">
+    ) : (
+      <Logo />
+    ) }
+    <div className="loginAndNav">
+      {(showPrimaryNav !== false) && 
+        <Navigation navLinks={navLinks} />
+      }
+      {(login !== false) &&
+        <nav className="loginNav">
             {user ? (
               <>
                 <div className="welcome">
@@ -68,9 +67,8 @@ const Header = ({
                 <Button size="small" onClick={onCreateAccount} label="Sign up" />
               </>
             )}
-          </nav>
-        }
-      </div>
+        </nav>
+      }
     </div>
   </header>
 );

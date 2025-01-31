@@ -49,8 +49,6 @@ var Header = function Header(_ref) {
     navLinks = _ref.navLinks;
   return /*#__PURE__*/_react["default"].createElement("header", {
     className: "hintertux-header"
-  }, /*#__PURE__*/_react["default"].createElement("div", {
-    className: "header-layout-container"
   }, logoLink ? /*#__PURE__*/_react["default"].createElement("a", {
     href: logoLink.url,
     title: logoLink.title,
@@ -75,7 +73,7 @@ var Header = function Header(_ref) {
     size: "small",
     onClick: onCreateAccount,
     label: "Sign up"
-  }))))));
+  })))));
 };
 Header.propTypes = {
   logoLink: _propTypes["default"].shape({

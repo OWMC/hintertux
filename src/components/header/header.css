@@ -1,9 +1,4 @@
 .hintertux-header {
-  position: fixed;
-  width: 100%;
-}
-
-.header-layout-container {
   align-items: center;
   display: flex;
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -12,26 +7,26 @@
   z-index: 10;
 }
 @media (prefers-color-scheme: dark) {
-  .header-layout-container {
+  .hintertux-header {
     background: #141414;
   }
 }
 
-.header-layout-container a {
+.hintertux-header a {
   transition: 0.25s;
 }
 
-.header-layout-container a:hover {
+.hintertux-header a:hover {
   background: #EEEEEE;
 }
 @media (prefers-color-scheme: dark) {
-  .header-layout-container a:hover {
+  .hintertux-header a:hover {
     background: #404040;
   }
 }
 
 
-.header-layout-container .logo {
+.hintertux-header .logo {
   box-sizing: unset;
   display: block;
   height: 32px;
@@ -39,21 +34,21 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .header-layout-container .logo {
+  .hintertux-header .logo {
     filter: invert();
   }
 }
 
 
-.header-layout-container button {
+.hintertux-header button {
   margin-right: 10px;
 }
 
-.header-layout-container button:last-of-type {
+.hintertux-header button:last-of-type {
   margin-right: 20px;
 }
 
-.header-layout-container .welcome {
+.hintertux-header .welcome {
   color: #141414;
   display: inline-block;
   font-size: 14px;
@@ -61,7 +56,7 @@
   margin-right: 10px;
 }
 @media (prefers-color-scheme: dark) {
-  .header-layout-container .welcome {
+  .hintertux-header .welcome {
     color: #EEEEEE;
   }
 }
