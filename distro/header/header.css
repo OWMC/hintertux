@@ -1,5 +1,6 @@
 .hintertux-header {
   position: fixed;
+  width: 100%;
 }
 
 .header-layout-container {
